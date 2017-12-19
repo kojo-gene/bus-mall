@@ -1,31 +1,45 @@
 'use strict';
 
-Products.allProducts = [];
+allProduct = [];
 
-function Products (name, path) {
+function Product(name, path) {
   this.name = name;
   this.path = path;
-  Products.allProducts.push(this);
+  this.shown = false;
+  this.displayed = 0;
+  this.clicks = [];
+  allProduct.push(this);
 }
 
-new Products('bag', 'assests/bag.jpg');
-new Products('banana', 'assests/banana.jpg');
-new Products('bathroom', 'assests/bathroom.jpg');
-new Products('boots', 'assests/boots.jpg');
-new Products('breakfast', 'assests/breakfast.jpg');
-new Products('bubblegum', 'assests/bubblegum.jpg');
-new Products('chair', 'assests/chair.jpg');
-new Products('cthulhu', 'assests/cthulhu.jpg');
-new Products('dog-duck', 'assests/dog-duck.jpg');
-new Products('dragon', 'assests/dragon.jpg');
-new Products('pen', 'assests/pen.jpg');
-new Products('pet-sweep', 'assests/pet-sweep.jpg');
-new Products('scissors', 'assests/scissors.jpg');
-new Products('shark', 'assests/shark.jpg');
-new Products('sweep', 'assests/sweep.png');
-new Products('tautuan', 'assests/tautuan.jpg');
-new Products('unicorn', 'assests/unicorn.jpg');
-new Products('usb', 'assests/usb.gif');
-new Products('water-can', 'assests/water-can.jpg');
-new Products('wine-glass', 'assests/wine-glass.jpg');
-console.log(Products.allProducts);
+for (var i = 0; i < allProducts.length; i++) {
+  console.log(allProducts[i]);
+
+  if ()
+}
+
+new Product('bag', 'assests/bag.jpg');
+new Product('banana', 'assests/banana.jpg');
+new Product('bathroom', 'assests/bathroom.jpg');
+new Product('boots', 'assests/boots.jpg');
+new Product('breakfast', 'assests/breakfast.jpg');
+new Product('bubblegum', 'assests/bubblegum.jpg');
+new Product('chair', 'assests/chair.jpg');
+new Product('cthulhu', 'assests/cthulhu.jpg');
+new Product('dog-duck', 'assests/dog-duck.jpg');
+new Product('dragon', 'assests/dragon.jpg');
+new Product('pen', 'assests/pen.jpg');
+new Product('pet-sweep', 'assests/pet-sweep.jpg');
+new Product('scissors', 'assests/scissors.jpg');
+new Product('shark', 'assests/shark.jpg');
+new Product('sweep', 'assests/sweep.png');
+new Product('tautuan', 'assests/tautuan.jpg');
+new Product('unicorn', 'assests/unicorn.jpg');
+new Product('usb', 'assests/usb.gif');
+new Product('water-can', 'assests/water-can.jpg');
+new Product('wine-glass', 'assests/wine-glass.jpg');
+console.log(allProduct);
+
+function randomPic() {
+  imagePosition = Math.floor(Math.random() * allProduct.length);
+  return(allProduct[i]);
+};
