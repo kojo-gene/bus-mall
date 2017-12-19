@@ -1,20 +1,34 @@
 'use strict';
+var picOne = document.getElementById('one-pic');
+var picTwo = document.getElementById('two-pic');
+var picThree = document.getElementById('three-pic');
 
-allProduct = [];
+var allProducts = [];
 
 function Product(name, path) {
   this.name = name;
   this.path = path;
-  this.shown = false;
+  this.flag = false; //flag to counter if displayed once true
   this.displayed = 0;
-  this.clicks = [];
-  allProduct.push(this);
+  this.clicks = 0;
+  allProducts.push(this);
 }
 
+function render() {
+  for (var i = 0; i < allProducts.length; i++) {
+    picOne = allProducts[i];
+    picTwo = allProducts[i];
+    picThree = allProducts[i];
+  }
+}
 for (var i = 0; i < allProducts.length; i++) {
   console.log(allProducts[i]);
 
-  if ()
+  if (this.display == allProducts[i]) {
+    this.flag = true;
+    this.clicks++;
+  }
+
 }
 
 new Product('bag', 'assests/bag.jpg');
@@ -37,9 +51,10 @@ new Product('unicorn', 'assests/unicorn.jpg');
 new Product('usb', 'assests/usb.gif');
 new Product('water-can', 'assests/water-can.jpg');
 new Product('wine-glass', 'assests/wine-glass.jpg');
-console.log(allProduct);
+console.log(allProducts);
 
 function randomPic() {
-  imagePosition = Math.floor(Math.random() * allProduct.length);
-  return(allProduct[i]);
+  imagePosition = Math.floor(Math.random() * allProducts.length);
+  return(allProducts[i]);
 };
+render();
